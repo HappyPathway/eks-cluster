@@ -26,3 +26,14 @@ module "network" {
   network_name = "${var.network_name}"
   region = "${var.region}"
 }
+
+resource "random_id" "random" {
+  keepers {
+    uuid = "${uuid()}"
+  }
+  byte_length = 32
+}
+
+output "kubeconfig" {
+  value = "${file("./kubeconfig_${var.cluster_name}")}"
+}
