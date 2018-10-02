@@ -20,7 +20,7 @@ module "eks" {
 
 module "network" {
   source  = "app.terraform.io/Darnold-Pipeline/network/aws"
-  version = "3.0.6"
+  version = "3.0.7"
   key_name = "${var.key_name}"
   network_name = "${var.network_name}"
   region = "${var.region}"
