@@ -35,3 +35,6 @@ resource "random_id" "random" {
 }
 
 
+output "kubeconfig" {
+  value = "${file("./kubeconfig_${var.cluster_name}")}"
+}
