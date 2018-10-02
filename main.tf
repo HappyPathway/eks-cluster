@@ -14,7 +14,7 @@ module "eks" {
   version = "1.0.0"
 
   cluster_name = "${var.cluster_name}"
-  subnets = [${module.network.private_subnet}, ${module.network.public_subnet}]
+  subnets = ["${module.network.private_subnet}", "${module.network.public_subnet}"]
   vpc_id = "${module.network.vpc_id}"
 }
 
