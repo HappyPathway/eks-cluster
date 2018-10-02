@@ -33,8 +33,3 @@ resource "random_id" "random" {
   }
   byte_length = 32
 }
-
-
-output "kubeconfig" {
-  value = "${file("./kubeconfig_${var.cluster_name}")}"
-}
