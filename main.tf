@@ -1,13 +1,8 @@
 variable "cluster_name" {}
 variable "env" {}
-variable "region" {}
 
 terraform {
   required_version = ">= 0.11.7"
-}
-
-provider "aws" {
-  region  = "${var.region}"
 }
 
 provider "random" {
