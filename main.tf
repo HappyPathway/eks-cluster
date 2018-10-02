@@ -14,7 +14,7 @@ module "eks" {
   version = "1.0.0"
 
   cluster_name = "${var.cluster_name}"
-  subnets = "${flatten(["${module.network.private_subnets}", "${module.network.public_subnets}"])}"
+  subnets = ["${module.network.public_subnets}"]
   vpc_id = "${module.network.vpc_id}"
 }
 
