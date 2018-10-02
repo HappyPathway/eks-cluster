@@ -16,6 +16,7 @@ module "eks" {
   cluster_name = "${var.cluster_name}"
   subnets = ["${module.network.public_subnets}"]
   vpc_id = "${module.network.vpc_id}"
+  manage_aws_auth = false
 }
 
 module "network" {
