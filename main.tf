@@ -110,4 +110,5 @@ module "eks" {
   worker_groups                        = "${local.worker_groups}"
   worker_group_count                   = "2"
   worker_additional_security_group_ids = ["${aws_security_group.all_worker_mgmt.id}"]
+  manage_aws_auth = false
 }
