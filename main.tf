@@ -108,7 +108,7 @@ module "vpc" {
 }
 
 module "eks" {
-  source                               = "../.."
+  source                               = "github.com/terraform-aws-modules/terraform-aws-eks"
   cluster_name                         = "${local.cluster_name}"
   subnets                              = ["${module.vpc.private_subnets}"]
   tags                                 = "${local.tags}"
